@@ -1,6 +1,9 @@
 # saa_web-dev
-beauty shop by girls
+Description of our project:
+ 
+Our Project name: SAA_BeautyStore_
 
+Description:
 This is a web application representing an online cosmetics store, where users can browse products, register, log in, and place orders. The administrator can add and edit products. The application consists of a frontend (Angular) and a backend (Django + Django REST Framework), and it uses JWT/Token-based authentication.
 
 Our group members:
