@@ -1,0 +1,27 @@
+<form (ngSubmit)="register()">
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img src="assets/logo.png" alt="Logo" style="width: 80px; height: auto;">
+    </div>
+
+    <h2>Register</h2>
+
+    <label>First Name</label>
+    <input type="text" [(ngModel)]="form.first_name" name="first_name" required>
+
+    <label>Last Name</label>
+    <input type="text" [(ngModel)]="form.last_name" name="last_name" required>
+
+    <label>Username</label>
+    <input type="text" [(ngModel)]="form.username" name="username" required>
+
+    <label>Password</label>
+    <input type="password" [(ngModel)]="form.password" name="password" required>
+
+    <label>Age:</label>
+    <input type="number" [(ngModel)]="form.age" name="age" required>
+
+    <label>Phone Number</label>
+    <input type="text" [(ngModel)]="form.phoneNumber" name="phoneNumber" required>
+
+    <button type="submit">Register</button>
+</form>

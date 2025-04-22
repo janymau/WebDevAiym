@@ -1,0 +1,136 @@
+/* Основные стили */
+.rad-page {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: rgba(220, 240, 255, 0.3); /* Нежно-голубой прозрачный фон */
+    min-height: 100vh;
+  }
+  
+  /* Заголовок бренда */
+  .brand-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px 0;
+  }
+  
+  .brand-title {
+    font-size: 48px;
+    color: #00eeff; /* Темно-голубой */
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+  
+  .brand-subtitle {
+    font-size: 20px;
+    color: #191902; /* Средне-голубой */
+    font-weight: 300;
+    margin-top: 10px;
+  }
+  
+  /* Список товаров */
+  .products-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Карточка товара */
+  .product-card {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .product-info {
+    padding: 25px;
+    flex: 1;
+  }
+  
+  /* Рейтинг */
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    color: #7f8c8d;
+    font-size: 14px;
+  }
+  
+  .stars {
+    color: #f1c40f; /* Золотой для звезд */
+  }
+  
+  .score {
+    font-weight: bold;
+    color: #1a5276; /* Темно-голубой */
+  }
+  
+  /* Названия товаров */
+  .product-category {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .product-name {
+    font-size: 22px;
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+  }
+  
+  /* Цены */
+  .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1a5276; /* Темно-голубой */
+  }
+  
+  .original-price {
+    text-decoration: line-through;
+    color: #95a5a6;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .current-price {
+    color: #2980b9; /* Средне-голубой для акционной цены */
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .product-card {
+      flex-direction: column;
+    }
+    
+    .product-image {
+      width: 100%;
+      height: auto;
+    }
+    
+    .brand-title {
+      font-size: 36px;
+    }
+    
+    .brand-subtitle {
+      font-size: 18px;
+    }
+  }

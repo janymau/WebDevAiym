@@ -1,0 +1,27 @@
+<div class="sales-container">
+  <h2 class="section-title">АКЦИИ</h2>
+  
+  <div class="promotions-grid">
+    <div class="promotion-card" *ngFor="let promo of promotions" (click)="openPromoDetails(promo)">
+      <div class="promo-image">
+        <img [src]="promo.imageUrl" [alt]="promo.title" />
+      </div>
+      <div class="promo-title">{{ promo.title }}</div>
+    </div>
+  </div>
+
+  <!-- Модальное окно -->
+  <div class="modal-overlay" *ngIf="showModal" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-button" (click)="closeModal()">×</button>
+      
+      <div class="promo-details">
+        <div class="promo-details-image">
+          <img [src]="selectedPromo?.details.imageUrl" [alt]="selectedPromo?.title" />
+        </div>
+        
+        <div class="promo-details-text" [innerHTML]="selectedPromo?.details.description"></div>
+      </div>
+    </div>
+  </div>
+</div>

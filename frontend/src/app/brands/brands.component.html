@@ -1,0 +1,18 @@
+<div class="brands-list">
+    <div class="brands-columns">
+        <div class="brands-column" *ngFor="let letter of alphabet">
+            <h2>{{ letter }}</h2>
+            <div class="brands-group">
+                <ng-container *ngFor="let brand of brandsByLetter[letter]">
+                    <a *ngIf="getBrandLink(brand)" class="brand-link" [href]="getBrandLink(brand)" target="_blank" rel="noopener noreferrer">
+              {{ brand }}
+            </a>
+
+                    <span *ngIf="!getBrandLink(brand)" class="brand-link no-link">
+              {{ brand }}
+            </span>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

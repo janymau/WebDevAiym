@@ -1,0 +1,26 @@
+<div class="page-wrapper">
+  <div class="home-page">
+    <div class="promo-banner">
+      <div class="promo-container">
+        <h2>RAD ДО -50%</h2>
+        <p>только с 18 по 20 апреля</p>
+        <button class="brand-button" routerLink="/rad">ПЕРЕЙТИ К БРЕНДУ →</button>
+      </div>
+    </div>
+    
+    <div class="brand-cards">
+      <div class="brand-card"><a href="https://www.dior.com/ru_ru?msockid=18c2aa4748d067de3412beb8495f6616">Dior</a></div>
+      <div class="brand-card"><a href="https://www.chanel.com/ru/">Chanel</a></div>
+      <div class="brand-card"><a href="https://www.tomford.com/">Tom Ford</a></div>
+      <div class="brand-card"><a href="https://www.sisley-paris.com/en-US/">Sisley</a></div>
+      <div class="brand-card"><a href="https://patrickta.com/">Patrick TA</a></div>
+    </div>
+    
+    @if (showCookies) {
+      <div class="cookies-footer">
+        <p>Мы используем cookies. Используя сайт, вы соглашаетесь с обработкой данных...</p>
+        <button class="accept-button" (click)="acceptCookies()">ХОРОШО</button>
+      </div>
+    }
+  </div>
+</div>

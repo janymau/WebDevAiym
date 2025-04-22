@@ -1,0 +1,21 @@
+<div class="gifts-section">
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let gift of gifts">
+        <img [src]="gift.image" class="product-image" alt="gift" />
+  
+        <div class="product-info">
+          <div class="brand">{{ gift.brand }}</div>
+          <div class="name">{{ gift.name }}</div>
+          <div class="type">{{ gift.type }}</div>
+  
+          <div class="label" *ngIf="gift.isNew">НОВИНКА</div>
+  
+          <div class="price-info">
+            <span class="old-price" *ngIf="gift.oldPrice">{{ gift.oldPrice | number:'1.0-0' }} тг.</span>
+            <span class="new-price">{{ gift.price | number:'1.0-0' }} тг.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

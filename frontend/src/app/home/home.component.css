@@ -1,0 +1,336 @@
+.home-page {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    padding: 60px 30px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2a559369549445.5b8668a03fb5a.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+
+/* ===================== NAV ===================== */
+
+.nav-bar {
+    background: transparent;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: lowercase;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* ===================== PROMO ===================== */
+
+.promo-banner {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    color: white;
+}
+
+.promo-banner h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.promo-banner p {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.brand-button {
+    background: white;
+    color: black;
+    padding: 12px 28px;
+    margin-top: 25px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.brand-button:hover {
+    background: #333;
+    color: white;
+}
+
+
+/* ===================== BRANDS ===================== */
+
+.brand-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+    margin: 60px 0;
+}
+
+.brand-card {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    height: 120px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.brand-card:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+
+/* ===================== COOKIES ===================== */
+
+.cookies-footer {
+    background-color: rgba(79, 74, 74, 0.6);
+    color: white;
+    padding: 15px 15px;
+    font-size: 0.85rem;
+    text-align: center;
+    z-index: 100;
+}
+
+.accept-button {
+    margin-top: 10px;
+    padding: 8px 18px;
+    font-weight: 600;
+    background: white;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.accept-button:hover {
+    background: #ddd;
+}
+
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 768px) {
+    .promo-banner h2 {
+        font-size: 1.8rem;
+    }
+    .brand-cards {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+    .nav-links {
+        gap: 15px;
+    }
+}
+
+
+/* Обновлённые стили карточек брендов */
+
+.brand-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 25px;
+    margin: 60px 0;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+.brand-card {
+    height: 120px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: rgb(52, 51, 51);
+    text-transform: uppercase;
+    backdrop-filter: blur(6px);
+    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Индивидуальные цвета карточек */
+
+.brand-card:nth-child(1) {
+    background-color: rgba(97, 202, 237, 0.2);
+    /* голубой */
+}
+
+.brand-card:nth-child(2) {
+    background-color: rgba(255, 192, 203, 0.25);
+    /* розовый */
+}
+
+.brand-card:nth-child(3) {
+    background-color: rgba(255, 255, 224, 0.25);
+    /* нежно-желтый */
+}
+
+.brand-card:nth-child(4) {
+    background-color: rgba(186, 255, 201, 0.25);
+    /* мятный */
+}
+
+.brand-card:nth-child(5) {
+    background-color: rgba(221, 160, 221, 0.25);
+    /* сиреневый */
+}
+
+
+/* Стили для ссылок в карточках брендов */
+
+.brand-card a {
+    color: #0e0f0f;
+    /* нежно-голубой цвет */
+    text-decoration: none;
+    /* Убираем подчеркивание */
+    transition: color 0.3s ease;
+    /* Плавный переход цвета */
+}
+
+
+/* Стили для ссылки при наведении */
+
+.brand-card a:hover {
+    color: #87cefa;
+    /* Цвет при наведении (более светлый голубой) */
+}
+
+
+/* Стили для ссылки при клике (активное состояние) */
+
+.brand-card a:active {
+    color: #4682b4;
+    /* Цвет при нажатии (темно-голубой) */
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.promo-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.promo-container {
+    background: rgba(52, 195, 242, 0.2);
+    /* нежно-голубой с прозрачностью */
+    border-radius: 16px;
+    padding: 40px 50px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    color: rgb(50, 48, 48);
+    max-width: 600px;
+    width: 100%;
+}
+
+.promo-container h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.promo-container p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.brand-button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.brand-button:hover {
+    background: #222;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.home-page {
+    flex: 1;
+    /* растягивает контент */
+    padding: 60px 30px;
+}

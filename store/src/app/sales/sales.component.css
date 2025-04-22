@@ -1,0 +1,130 @@
+/* Фон для всего контейнера */
+.sales-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(173, 216, 230, 0.5); /* Голубой с прозрачностью */
+  border-radius: 10px; /* Радиус для скругления углов */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.promotions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.promotion-card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.promotion-card:hover {
+  transform: translateY(-5px);
+}
+
+.promo-image img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}
+
+.promo-title {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  background: white;
+}
+
+/* Стили модального окна */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(194, 219, 227, 0.2); /* нежно-голубой с прозрачностью */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.promo-details {
+  display: flex;
+  gap: 30px;
+}
+
+.promo-details-image {
+  flex: 1;
+}
+
+.promo-details-image img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.promo-details-text {
+  flex: 1;
+}
+
+.promo-details-text h3 {
+  margin-top: 0;
+  color: #d63384;
+}
+
+.promo-details-text h4 {
+  color: #6f42c1;
+}
+
+.small-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .promo-details {
+    flex-direction: column;
+  }
+
+  .promotions-grid {
+    grid-template-columns: 1fr;
+  }
+}

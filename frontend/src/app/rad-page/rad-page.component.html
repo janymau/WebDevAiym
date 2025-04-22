@@ -1,0 +1,24 @@
+<div class="rad-page">
+    <div class="brand-header">
+        <h1 class="brand-title">RAD</h1>
+        <h2 class="brand-subtitle">FEELINI THOSE FEELS</h2>
+    </div>
+
+    <div class="products-list">
+        <div class="product-card" *ngFor="let product of products">
+            <img [src]="product.image" [alt]="product.title" class="product-image">
+            <div class="product-info">
+                <div class="rating">
+                </div>
+                <h3 class="product-category">{{ product.category.name }}</h3>
+                <p class="product-name">{{ product.title }}</p>
+                <div class="price">
+                    <span *ngIf="product.original_price" class="original-price">
+                        {{ product.original_price}} ₸
+                    </span>
+                    <span class="current-price">{{ product.price }} ₸</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

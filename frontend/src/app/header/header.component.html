@@ -1,0 +1,27 @@
+<header class="site-header">
+    <div class="search-box">
+        <fa-icon [icon]="faSearch"></fa-icon>
+        <input type="text" placeholder="Поиск по товарам" />
+    </div>
+
+    <div class="header-icons">
+        <div class="icon-block">
+            <div class="user-section">
+                <fa-icon [icon]="faUser" (click)="toggleDropdown()"></fa-icon>
+                <div class="user-dropdown" *ngIf="isDropdownOpen">
+                    <div *ngIf="isLoggedIn; else guest">
+                        <div class="dropdown-item" (click)="goToProfile()">Мой профиль</div>
+                        <div class="dropdown-item" (click)="logout()">Выйти</div>
+                    </div>
+                    <ng-template #guest>
+                        <div class="dropdown-item" (click)="login()">Войти</div>
+                        <div class="dropdown-item" (click)="register()">Регистрация</div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        <div class="icon-block">
+            <fa-icon [icon]="faShoppingBag"></fa-icon>
+        </div>
+    </div>
+</header>

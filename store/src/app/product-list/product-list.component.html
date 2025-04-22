@@ -1,0 +1,18 @@
+<div class="product-list">
+  <h2>{{ category }}</h2>
+  <div *ngFor="let product of products" class="product-card">
+    <img [src]="product.image" [alt]="product.name" class="product-image-small" />
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.description }}</p>
+    <a [href]="product.link" target="_blank">View on Kaspi</a>
+
+    <div class="actions">
+      <button (click)="onLike(product.name)">❤ {{ product.likes }}</button>
+      <button (click)="onRemove(product.name)">🗑 Remove</button>
+    </div>
+
+    <div class="share-buttons">
+      <button (click)="shareOnWhatsApp(product.link)" class="whatsapp">Share via WhatsApp</button>
+    </div>
+  </div>
+</div>
